@@ -1,0 +1,10 @@
+.mobile-nav {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}

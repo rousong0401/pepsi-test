@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.jpg" />
+    <meta
+      property="og:title"
+      content="百事可樂陪你一起GO夏天!天天抽GoPro，加碼再抽Gogoro!
+  "
+    />
+    <meta
+      property="og:description"
+      content="即日起至 08/31，買百事/七喜/激浪系列商品，登錄發票天天抽GoPro，加碼再抽Gogoro!
+    "
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://2022summer.pepsi.com.tw/" />
+    <meta property="og:image" content="./img/meta/share.jpg" />
+    <meta
+      name="keywords"
+      content="百事可樂、pepsi、有百事GO夏天、七喜、激浪、7up、Mountaindew、可樂
+  GoPro HERO 10 Black、Gogoro、Gogoro機車、Bose SoundLink Revolve 藍牙揚聲器
+  II、藍牙音響 肯德基、必勝客、美食優惠券、coupon、鄧紫棋、GEM、代言人
+  發票、登錄發票、LINE登錄發票、上網抽、天天抽、抽獎、7-11、超商、便利商店"
+    />
+    <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <title>有百事GO夏天!</title>
+  </head>
+  <body>
+    <div id="app">
+      <header
+        class="fixed top-0 left-0 z-999 flex h-[54px] w-full items-center justify-between bg-blue-100 px-8 lg:h-[84px] xl:pr-12 xl:pl-[88px]"
+      >
+        <h1>
+          <a href="index.html" class="block">
+            <picture>
+              <source srcset="./img/pc/logo.svg" media="(min-width: 992px)" />
+              <img src="./img/mobile/logo.svg" alt="logo" />
+            </picture>
+          </a>
+        </h1>
+        <div class="lg:hidden">
+          <div class="hamburger relative h-6 w-6" @click="toggleMenu">
+            <span :class="{'is-active': isOpen}"></span>
+            <span :class="{'is-active': isOpen}"></span>
+            <span :class="{'is-active': isOpen}"></span>
+          </div>
+          <div
+            class="mobile-nav absolute top-0 left-0 mt-[54px] flex w-full flex-col items-center border-b-[8px] border-green-100 bg-blue-100 pt-10 pb-7 duration-300"
+            :class="{'is-active': isOpen}"
+          >
+            <ul class="space-y-[10px]">
+              <li>
+                <a
+                  href="index.html#title-1"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  >登錄發票
+                </a>
+              </li>
+              <li>
+                <a
+                  href="index.html#title-2"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  >活動辦法</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#title-4"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  >影音專區</a
+                >
+              </li>
+              <li>
+                <a
+                  href="winners.html"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  >中獎名單</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#title-3"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  >注意事項</a
+                >
+              </li>
+            </ul>
+            <ul class="mt-[54px] flex">
+              <li>
+                <a
+                  data-href="https://developers.facebook.com/docs/plugins/"
+                  href="https://www.facebook.com/sharer/sharer.php?u=http://hstarnas.synology.me:9474/"
+                  target="_blank"
+                  class="block"
+                >
+                  <img src="./img/pc/icon-fb.svg" alt="fb 分享" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript: void(window.open('https://social-plugins.line.me/lineit/share?url=http://hstarnas.synology.me:9474/'));"
+                  class="ml-4 block"
+                >
+                  <img src="./img/pc/icon-line.svg" alt="line 分享" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="hidden lg:flex lg:items-center">
+          <li>
+            <a
+              href="index.html#title-1"
+              class="group flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              登錄發票
+            </a>
+          </li>
+          <li>
+            <a
+              href="index.html#title-2"
+              class="group ml-4 flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+              @click="goAnchor('#title-2')"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              活動辦法</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#title-3"
+              class="group ml-4 flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+              @click="goAnchor('#title-3')"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              注意事項</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#title-4"
+              class="group ml-4 flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+              @click="goAnchor('#title-4')"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              影音專區</a
+            >
+          </li>
+          <li>
+            <a
+              href="javascript:;"
+              class="group ml-4 flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              中獎名單</a
+            >
+          </li>
+          <li>
+            <a
+              data-href="https://developers.facebook.com/docs/plugins/"
+              href="https://www.facebook.com/sharer/sharer.php?u=http://hstarnas.synology.me:9474/"
+              target="_blank"
+              class="ml-4 block duration-300 hover:scale-105 xl:ml-12"
+            >
+              <img src="./img/pc/icon-fb.svg" alt="fb 分享" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="javascript: void(window.open('https://social-plugins.line.me/lineit/share?url=http://hstarnas.synology.me:9474/'));"
+              class="ml-4 block duration-300 hover:scale-105"
+            >
+              <img src="./img/pc/icon-line.svg" alt="line 分享" />
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <main class="mt-[54px] lg:mt-[84px]">
+        <div
+          class="bg-[url(../img/mobile/bg-winners-banner.svg)] bg-cover bg-center bg-no-repeat px-4 pt-[30px] pb-10 md:bg-[url(../img/pc/bg-winners-banner.svg)] md:bg-contain md:bg-top md:py-[70px]"
+        >
+          <div class="mx-auto max-w-[700px]">
+            <div class="text-center">
+              <div class="relative md:hidden">
+                <img
+                  src="./img/mobile/bg-lightning-2.svg"
+                  alt="閃電"
+                  class="mx-auto"
+                />
+                <img
+                  src="./img/mobile/title-5-2x.png"
+                  alt="中獎名單"
+                  class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                />
+              </div>
+              <div class="relative hidden md:block">
+                <img
+                  src="./img/pc/bg-lightning-2.svg"
+                  alt="閃電"
+                  class="mx-auto"
+                />
+                <img
+                  src="./img/pc/title-5-2x.png"
+                  alt="中獎名單"
+                  class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                />
+              </div>
+              <div class="space-y-8 md:space-y-5">
+                <p class="mt-3 text-14px font-bold text-white md:text-16px">
+                  得獎者請自行下載"中獎回函"並填妥個人資料，依活動辦法說明完成兌獎流程方可領獎。
+                </p>
+                <div class="mx-auto max-w-[600px]">
+                  <div class="relative md:hidden">
+                    <img
+                      src="./img/mobile/bg-proudct-text-1.svg"
+                      alt="天天抽(共10名)"
+                      class="mx-auto"
+                    />
+                    <img
+                      src="./img/mobile/bg-product-1-2x.png"
+                      alt="GoPro HERO 10 Black"
+                      class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                    />
+                  </div>
+                  <div class="relative hidden md:block">
+                    <img
+                      src="./img/pc/bg-proudct-text-1.svg"
+                      alt="天天抽(共10名)"
+                      class="mx-auto"
+                    />
+                    <img
+                      src="./img/pc/bg-product-1-2x.png"
+                      alt="GoPro HERO 10 Black"
+                      class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                    />
+                  </div>
+                  <span
+                    class="block text-18px font-medium text-white md:-mt-4 md:text-20px lg:text-24px"
+                    >GoPro HERO 10 Black</span
+                  >
+                  <span class="text-14px font-medium text-white md:text-16px"
+                    >(價值NT$16,500/台)</span
+                  >
+                  <ul class="mt-3 space-y-2">
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-pink-100 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-green-200 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-pink-100 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-green-200 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-pink-100 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-green-200 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-pink-100 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-green-200 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-pink-100 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-green-200 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <a
+                    href="javascript:;"
+                    class="relative mx-[4px] mt-8 flex items-center justify-center bg-green-200 p-2 font-bold text-white md:mx-[5px] md:hidden"
+                  >
+                    <span class="relative">中獎回函下載</span>
+                    <img
+                      src="./img/pc/icon-double-white-arrow.svg"
+                      alt="箭頭"
+                      class="relative ml-3"
+                    />
+                  </a>
+                  <a
+                    href="javascript:;"
+                    class="btn-pink--outline relative mx-[5px] mt-6 hidden bg-green-200 p-2 font-bold text-white md:flex md:items-center md:justify-center"
+                  >
+                    <span class="relative">Gopro HERO 10中獎回函下載</span>
+                    <img
+                      src="./img/pc/icon-double-white-arrow.svg"
+                      alt="箭頭"
+                      class="relative ml-3"
+                    />
+                  </a>
+                </div>
+                <div class="mx-auto max-w-[600px]">
+                  <div class="relative md:hidden">
+                    <img
+                      src="./img/mobile/bg-proudct-text-2.svg"
+                      alt="加碼抽(共1名)"
+                      class="mx-auto"
+                    />
+                    <img
+                      src="./img/mobile/bg-product-2-2x.png"
+                      alt="Gogoro SuperSport ACE"
+                      class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                    />
+                  </div>
+                  <div class="relative hidden md:block">
+                    <img
+                      src="./img/pc/bg-proudct-text-2.svg"
+                      alt="加碼抽(共1名)"
+                      class="mx-auto"
+                    />
+                    <img
+                      src="./img/pc/bg-product-2-2x.png"
+                      alt="Gogoro SuperSport ACE"
+                      class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                    />
+                  </div>
+                  <span
+                    class="block text-18px font-medium text-white md:-mt-4 md:text-20px lg:text-24px"
+                    >Gogoro SuperSport ACE</span
+                  >
+                  <span class="text-14px font-medium text-white md:text-16px"
+                    >(價值NT$115,980/台)</span
+                  >
+                  <ul class="mt-3 space-y-2">
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-pink-100 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <a
+                    href="javascript:;"
+                    class="relative mx-[4px] mt-8 flex items-center justify-center bg-pink-100 p-2 font-bold text-white md:mx-[5px] md:hidden"
+                  >
+                    <span class="relative">中獎回函下載</span>
+                    <img
+                      src="./img/pc/icon-double-white-arrow.svg"
+                      alt="箭頭"
+                      class="relative ml-3"
+                    />
+                  </a>
+                  <a
+                    href="javascript:;"
+                    class="btn-green--outline relative mx-[5px] mt-6 hidden bg-pink-100 p-2 font-bold text-white md:flex md:items-center md:justify-center"
+                  >
+                    <span class="relative"
+                      >Gogoro SuperSport ACE中獎回函下載</span
+                    >
+                    <img
+                      src="./img/pc/icon-double-white-arrow.svg"
+                      alt="箭頭"
+                      class="relative ml-3"
+                    />
+                  </a>
+                </div>
+                <div class="mx-auto max-w-[600px]">
+                  <div class="relative md:hidden">
+                    <img
+                      src="./img/mobile/bg-proudct-text-3.svg"
+                      alt="7-11通路限定(共1名)"
+                      class="mx-auto"
+                    />
+                    <img
+                      src="./img/mobile/bg-product-3-2x.png"
+                      alt="Bose SoundLink Revolve+ 藍牙揚聲器 II"
+                      class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                    />
+                  </div>
+                  <div class="relative hidden md:block">
+                    <img
+                      src="./img/pc/bg-proudct-text-3.svg"
+                      alt="7-11通路限定(共1名)"
+                      class="mx-auto"
+                    />
+                    <img
+                      src="./img/pc/bg-product-3-2x.png"
+                      alt="Bose SoundLink Revolve+ 藍牙揚聲器 II"
+                      class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                    />
+                  </div>
+                  <span
+                    class="block text-18px font-medium text-white md:-mt-4 md:text-20px lg:text-24px"
+                    >Bose SoundLink Revolve+ 藍牙揚聲器 II</span
+                  >
+                  <span class="text-14px font-medium text-white md:text-16px"
+                    >(價值NT$11,900/台)</span
+                  >
+                  <ul class="mt-3 space-y-2">
+                    <li>
+                      <div
+                        class="border-4 border-blue-200 bg-green-200 px-1 pt-1.5 pb-1 md:border-[5px] md:pt-3"
+                      >
+                        <span
+                          class="text-14px font-bold text-white md:text-16px"
+                          >賴O輝</span
+                        >
+                        <div class="mt-1 grid grid-cols-2 gap-1 md:mt-2">
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >NF00511125</span
+                            >
+                          </div>
+                          <div class="bg-white p-1 md:p-2">
+                            <span
+                              class="text-14px font-medium text-gray-400 md:text-16px"
+                              >0988XXX600</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <a
+                    href="javascript:;"
+                    class="relative mx-[4px] mt-8 flex items-center justify-center bg-green-200 p-2 font-bold text-white md:mx-[5px] md:hidden"
+                  >
+                    <span class="relative">中獎回函下載</span>
+                    <img
+                      src="./img/pc/icon-double-white-arrow.svg"
+                      alt="箭頭"
+                      class="relative ml-3"
+                    />
+                  </a>
+                  <a
+                    href="javascript:;"
+                    class="btn-pink--outline relative mx-[5px] mt-6 hidden bg-green-200 p-2 font-bold text-white md:flex md:items-center md:justify-center"
+                  >
+                    <span class="relative"
+                      >Bose SoundLink Revolve + 藍芽揚聲器Ⅱ中獎回函下載</span
+                    >
+                    <img
+                      src="./img/pc/icon-double-white-arrow.svg"
+                      alt="箭頭"
+                      class="relative ml-3"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="bg-white px-[26px] pt-2.5 pb-1.5 lg:pt-4 lg:pb-2.5">
+        <div class="mx-auto max-w-[1200px]">
+          <div class="flex items-center justify-center lg:justify-between">
+            <picture>
+              <source
+                srcset="./img/pc/footer-logo.svg"
+                media="(min-width: 992px)"
+              />
+              <img src="./img/mobile/footer-logo.svg" alt="footer-logo" />
+            </picture>
+            <ul class="hidden lg:flex">
+              <li class="text-14px font-bold text-blue-200 xl:text-16px">
+                有百事GO夏天 活動小組
+              </li>
+              <li
+                class="ml-4 text-14px text-blue-200 xl:ml-[30px] xl:text-16px"
+              >
+                台中市沙鹿區興安路65號
+              </li>
+              <li
+                class="ml-4 text-14px text-blue-200 xl:ml-[30px] xl:text-16px"
+              >
+                活動客服電話：0800-461015，上班時間08:00-12:00、13:00-17:00。
+              </li>
+            </ul>
+          </div>
+          <p class="mt-2.5 text-center text-14px text-gray-300">
+            百事可樂、PEPSI，PEPSI-COLA及百事圓球圖案為美國百事公司PepsiCo, Inc.
+            所擁有的商標©百事公司
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/plugin/aos.js"></script>
+    <script src="./js/plugin/swiper-bundle.min.js"></script>
+    <script src="./js/plugin/jquery-3.6.0.min.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

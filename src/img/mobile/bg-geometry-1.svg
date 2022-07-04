@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="106" height="108" viewBox="0 0 106 108">
+  <defs>
+    <clipPath id="clip-bg-geometry">
+      <rect width="106" height="108"/>
+    </clipPath>
+  </defs>
+  <g id="bg-geometry" clip-path="url(#clip-bg-geometry)">
+    <g id="活動辦法右上" transform="translate(-269 -2597.583)">
+      <path id="Path_26" data-name="Path 26" d="M109.79,0,35.152,62.289l-23.141,1.63L0,13.835Z" transform="translate(412.224 2709.259) rotate(-169)" fill="#ff4398"/>
+      <path id="Path_34" data-name="Path 34" d="M263.04,330.4,373.53,203.612l43.349,37.156L263.04,342.457Z" transform="translate(7.542 2361.21)" fill="#004990" stroke="#004990" stroke-miterlimit="10" stroke-width="2.434"/>
+    </g>
+  </g>
+</svg>

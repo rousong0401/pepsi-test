@@ -1,0 +1,19 @@
+.swiper-pagination  {
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.swiper-pagination-bullet {
+  background-color: $blue-200;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $white;
+}
+
+.swiper-button-prev,.swiper-button-next {
+  &::after {
+    color: $white;
+  }
+}

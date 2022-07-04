@@ -1,0 +1,97 @@
+.btn-pink--outline {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    transition: transform .3s ease, background-color .3s ease;
+  }
+  img {
+    transition: transform .3s ease;
+  }
+  &:hover {
+    &::before {
+      background-color: $pink-100;
+      transform: scaleX(1);
+      transform-origin: 0 0;
+    }
+    img {
+      transform: translateX(20%);
+    }
+  }
+}
+
+.btn-green--outline {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: 100% 0;
+    transition: transform .3s ease, background-color .3s ease;
+  }
+  img {
+    transition: transform .3s ease;
+  }
+  &:hover {
+    &::before {
+      background-color: $green-200;
+      transform: scaleX(1);
+      transform-origin: 0 0;
+    }
+    img {
+      transform: translateX(20%);
+    }
+  }
+}
+
+.btn-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 92px;
+  height: 92px;
+  background-color: $blue-200;
+  background: linear-gradient(135deg, $blue-200 0%, $blue-200 40%, $white 50%, $blue-200 60%, $blue-200 100%);
+  background-repeat: no-repeat;  
+  background-size: 450%;
+  background-position: 0px;
+  border-radius: 50%;
+  transition: background-color .3s;
+  animation: light 1.5s;
+  animation-iteration-count: 2;
+  animation-delay: 2s;
+  @include mq(md) {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding-top: 100%;
+    width: auto;
+    height: auto;
+    background-size: 550%;
+  }
+  @include mq(lg) {
+    background-size: 450%;
+  }
+  @include mq(xl) {
+    background-size: 400%;
+  }
+  @include mq(xxl) {
+    background-size: 300%;
+  }
+  &:hover {
+    background-color: $pink-100;
+    background: linear-gradient(135deg, $pink-100 0%, $pink-100 40%, $white 50%, $pink-100 60%, $pink-100 100%);
+    animation: none; 
+    background-size: 300%; 
+  }
+}

@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.jpg" />
+    <meta
+      property="og:title"
+      content="百事可樂陪你一起GO夏天!天天抽GoPro，加碼再抽Gogoro!
+    "
+    />
+    <meta
+      property="og:description"
+      content="即日起至 08/31，買百事/七喜/激浪系列商品，登錄發票天天抽GoPro，加碼再抽Gogoro!
+      "
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://hstarnas.synology.me:9474/" />
+    <meta property="og:image" content="./img/meta/share.jpg" />
+    <meta
+      name="keywords"
+      content="百事可樂、pepsi、有百事GO夏天、七喜、激浪、7up、Mountaindew、可樂
+    GoPro HERO 10 Black、Gogoro、Gogoro機車、Bose SoundLink Revolve 藍牙揚聲器
+    II、藍牙音響 肯德基、必勝客、美食優惠券、coupon、鄧紫棋、GEM、代言人
+    發票、登錄發票、LINE登錄發票、上網抽、天天抽、抽獎、7-11、超商、便利商店"
+    />
+    <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <title>有百事GO夏天!</title>
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="loading">
+      <div class="flex justify-center items-center h-full">
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <picture>
+            <source srcset="./img/pc/logo.svg" media="(min-width: 992px)" />
+            <img src="./img/mobile/logo.svg" alt="logo" class="heartBeat3" />
+          </picture>
+        </div>
+      </div>
+    </div> -->
+    <div class="loading">
+      <div class="loading__background"></div>
+      <div class="loading__foreground">
+        <div class="loading__logo">
+          <picture>
+            <source srcset="./img/pc/logo.svg" media="(min-width: 992px)" />
+            <img src="./img/mobile/logo.svg" alt="logo" />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div id="app">
+      <header
+        class="fixed top-0 left-0 z-999 flex h-[54px] w-full items-center justify-between bg-blue-100 px-8 lg:h-[84px] xl:pr-12 xl:pl-[88px]"
+      >
+        <h1>
+          <a href="index.html" class="block">
+            <picture>
+              <source srcset="./img/pc/logo.svg" media="(min-width: 992px)" />
+              <img src="./img/mobile/logo.svg" alt="logo" />
+            </picture>
+          </a>
+        </h1>
+        <div class="lg:hidden">
+          <div class="hamburger relative h-6 w-6" @click="toggleMenu">
+            <span :class="{'is-active': isOpen}"></span>
+            <span :class="{'is-active': isOpen}"></span>
+            <span :class="{'is-active': isOpen}"></span>
+          </div>
+          <div
+            class="mobile-nav absolute top-0 left-0 mt-[54px] flex w-full flex-col items-center border-b-[8px] border-green-100 bg-blue-100 pt-10 pb-7 duration-300"
+            :class="{'is-active': isOpen}"
+          >
+            <ul class="space-y-[10px]">
+              <li>
+                <a
+                  href="javascript:;"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  @click="goAnchor('#title-1')"
+                  >登錄發票
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:;"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  @click="goAnchor('#title-2')"
+                  >活動辦法</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:;"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  @click="goAnchor('#title-4')"
+                  >影音專區</a
+                >
+              </li>
+              <li>
+                <a
+                  href="winners.html"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  >中獎名單</a
+                >
+              </li>
+              <li>
+                <a
+                  href="javascript:;"
+                  class="block rounded-full bg-pink-100 py-2 px-20 text-20px font-bold text-white"
+                  @click="openModal('precautions')"
+                  >注意事項</a
+                >
+              </li>
+            </ul>
+            <ul class="mt-[54px] flex">
+              <li>
+                <a
+                  data-href="https://developers.facebook.com/docs/plugins/"
+                  href="https://www.facebook.com/sharer/sharer.php?u=http://hstarnas.synology.me:9474/"
+                  target="_blank"
+                  class="block"
+                >
+                  <img src="./img/pc/icon-fb.svg" alt="fb 分享" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript: void(window.open('https://social-plugins.line.me/lineit/share?url=http://hstarnas.synology.me:9474/'));"
+                  class="ml-4 block"
+                >
+                  <img src="./img/pc/icon-line.svg" alt="line 分享" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="hidden lg:flex lg:items-center">
+          <li>
+            <a
+              href="javascript:;"
+              class="group flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+              @click="goAnchor('#title-1')"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              登錄發票
+            </a>
+          </li>
+          <li>
+            <a
+              href="javascript:;"
+              class="group ml-4 flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+              @click="goAnchor('#title-2')"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              活動辦法</a
+            >
+          </li>
+          <li>
+            <a
+              href="javascript:;"
+              class="group ml-4 flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+              @click="openModal('precautions')"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              注意事項</a
+            >
+          </li>
+          <li>
+            <a
+              href="javascript:;"
+              class="group ml-4 flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+              @click="goAnchor('#title-4')"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              影音專區</a
+            >
+          </li>
+          <li>
+            <a
+              href="winners.html"
+              class="group ml-4 flex items-center rounded-full bg-pink-100 px-4 py-2 text-18px font-bold text-white hover:bg-green-200 xl:px-7 xl:text-20px"
+            >
+              <img
+                src="./img/pc/icon-lightning.svg"
+                alt="閃電"
+                class="mr-2 hidden group-hover:block"
+              />
+              中獎名單</a
+            >
+          </li>
+          <li>
+            <a
+              data-href="https://developers.facebook.com/docs/plugins/"
+              href="https://www.facebook.com/sharer/sharer.php?u=http://hstarnas.synology.me:9474/"
+              target="_blank"
+              class="ml-4 block duration-300 hover:scale-105 xl:ml-12"
+            >
+              <img src="./img/pc/icon-fb.svg" alt="fb 分享" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="javascript: void(window.open('https://social-plugins.line.me/lineit/share?url=http://hstarnas.synology.me:9474/'));"
+              class="ml-4 block duration-300 hover:scale-105"
+            >
+              <img src="./img/pc/icon-line.svg" alt="line 分享" />
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <main class="relative mt-[54px] lg:mt-[84px]">
+        <a
+          href="javascript:;"
+          class="absolute bottom-4 right-4 z-1099 h-[50px] w-[50px] rounded-full bg-white bg-opacity-80 duration-300 hover:-translate-y-2 md:h-20 md:w-20"
+          @click="goTop"
+        >
+          <picture>
+            <source
+              srcset="./img/pc/icon-up-arrow.svg"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./img/mobile/icon-up-arrow.svg"
+              alt="gotop"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+          </picture>
+        </a>
+        <section class="relative">
+          <div class="md:hidden">
+            <img
+              src="./img/mobile/bg-kv-primary-banner-2x.png"
+              alt="kv背景圖"
+              class="absolute -bottom-3 left-0 h-full w-full border-b-4 border-blue-200 object-cover"
+            />
+            <img
+              src="./img/mobile/bg-kv-secondary-banner.svg"
+              alt="kv背景圖"
+              class="relative w-full"
+            />
+            <img
+              src="./img/mobile/bg-lightning-1.svg"
+              alt="閃電"
+              class="move absolute top-[65%] left-[15%] w-[13%]"
+            />
+            <img
+              src="./img/mobile/bg-trumpet.svg"
+              alt="喇叭"
+              class="heartBeat1 absolute bottom-0 right-[4.5%] w-[40.5%]"
+            />
+            <a
+              href="javascript:;"
+              class="group absolute top-[130px] right-6 h-[108px] w-[108px] rounded-full bg-blue-200"
+              @click="goAnchor('#title-1')"
+            >
+              <div
+                class="absolute top-1/2 left-1/2 h-[100px] w-[100px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white"
+              >
+                <div class="btn-light">
+                  <img
+                    src="./img/mobile/bg-circle.svg"
+                    alt="圓形圖"
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 duration-300 group-hover:rotate-90"
+                  />
+                  <span
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-22px font-bold text-white"
+                    >立即<br />登錄</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="relative hidden md:block">
+            <img src="./img/pc/bg-kv-banner-1.png" alt="kv背景圖" />
+            <img
+              src="./img/pc/bg-kv-banner-2.png"
+              alt="kv背景圖"
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            />
+            <img
+              src="./img/pc/bg-kv-banner-3.png"
+              alt="kv背景圖"
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              data-aos="fade-up-right"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+            />
+            <img
+              src="./img/pc/bg-kv-banner-4.png"
+              alt="kv背景圖"
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              data-aos="fade-up-right"
+              data-aos-duration="1000"
+              data-aos-delay="900"
+            />
+            <img
+              src="./img/pc/bg-kv-banner-text.svg"
+              alt="kv背景圖"
+              class="absolute top-0 left-0 h-full w-full object-cover"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            />
+            <img
+              src="./img/pc/bg-lightning-1.svg"
+              alt="閃電"
+              class="move absolute top-[40%] right-[35%] w-[5.7%]"
+            />
+            <img
+              src="./img/pc/bg-trumpet-1.svg"
+              alt="喇叭"
+              class="heartBeat1 absolute bottom-[16%] right-[8%] w-[17%]"
+            />
+            <div
+              class="absolute top-1/2 left-1/2 w-[11%] -translate-x-1/2 -translate-y-1/2"
+              @click="goAnchor('#title-1')"
+            >
+              <a
+                href="javascript:;"
+                class="group relative block rounded-full bg-white pt-[100%]"
+              >
+                <div
+                  class="absolute inset-0 rounded-full border-[6px] border-blue-200"
+                ></div>
+                <div
+                  class="absolute top-1/2 left-1/2 w-[80%] lg:w-[85%] -translate-x-1/2 -translate-y-1/2"
+                >
+                  <div class="btn-light">
+                    <img
+                      src="./img/pc/bg-circle.svg"
+                      alt="圓形圖"
+                      class="absolute top-1/2 left-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 duration-300 group-hover:rotate-90"
+                    />
+                    <span
+                      class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white lg:text-24px xl:text-28px xxl:text-40px"
+                      >立即<br />登錄</span
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <div
+          class="bg-cover bg-center bg-no-repeat lg:bg-[url('../img/pc/bg-main-banner.svg')]"
+        >
+          <section class="relative">
+            <div
+              id="title-1"
+              class="absolute top-[-54px] left-0 lg:top-[-84px]"
+            ></div>
+            <div class="px-4 pt-10 pb-4 md:pb-[30px]">
+              <div class="mx-auto max-w-[1200px]">
+                <div class="relative md:hidden">
+                  <img
+                    src="./img/mobile/bg-lightning-2.svg"
+                    alt="閃電"
+                    class="mx-auto"
+                  />
+                  <img
+                    src="./img/mobile/title-1-2x.png"
+                    alt="登錄發票"
+                    class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                  />
+                </div>
+                <div class="relative hidden md:block">
+                  <img
+                    src="./img/pc/bg-lightning-2.svg"
+                    alt="閃電"
+                    class="mx-auto"
+                  />
+                  <img
+                    src="./img/pc/title-1-2x.png"
+                    alt="登錄發票"
+                    class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                  />
+                </div>
+                <div
+                  class="mt-4 flex flex-col-reverse flex-wrap items-center md:mt-8 md:flex-row lg:mt-11 xl:pr-12"
+                >
+                  <div class="w-full md:w-1/2">
+                    <picture>
+                      <source
+                        srcset="./img/pc/bg-cola.png"
+                        media="(min-width: 768px)"
+                      />
+                      <img
+                        src="./img/mobile/bg-cola-2x.png"
+                        alt="產品圖"
+                        class="isHeartBeat relative z-20 ml-10 mt-11 w-[68%] md:mt-0 md:ml-0 md:w-auto xl:-ml-24"
+                        :class="{'heartBeat2': isAnimate}"
+                      />
+                    </picture>
+                  </div>
+                  <div class="w-full md:w-1/2">
+                    <p
+                      class="text-center text-14px text-white md:text-left md:text-16px"
+                    >
+                      請正確填寫個人資訊，並詳閱活動說明
+                    </p>
+                    <form class="mt-5">
+                      <div class="flex border-4 border-blue-200">
+                        <label
+                          for="name"
+                          class="flex min-w-[70px] items-center justify-center bg-blue-200 text-14px font-bold text-white md:min-w-[100px] md:text-16px lg:min-w-[130px]"
+                          >姓名</label
+                        >
+                        <input
+                          type="text"
+                          id="name"
+                          placeholder="請填寫您的真實姓名"
+                          class="form-control w-full bg-white py-2 px-4 text-14px text-gray-300 md:px-6 md:text-16px"
+                          v-model="webForm.user.name"
+                        />
+                      </div>
+                      <div class="mt-2 flex border-4 border-blue-200">
+                        <label
+                          for="tel"
+                          class="flex min-w-[70px] items-center justify-center bg-blue-200 text-14px font-bold text-white md:min-w-[100px] md:text-16px lg:min-w-[130px]"
+                          >行動電話</label
+                        >
+                        <input
+                          type="tel"
+                          id="tel"
+                          placeholder="請填寫您的手機"
+                          maxlength="10"
+                          class="form-control w-full bg-white py-2 px-4 text-14px text-gray-300 md:hidden"
+                          v-model="webForm.user.tel"
+                        />
+                        <input
+                          type="tel"
+                          id="tel"
+                          placeholder="請填寫您的手機(將以此號碼通知中獎)"
+                          maxlength="10"
+                          class="form-control hidden w-full bg-white py-2 px-6 text-gray-300 md:block"
+                          v-model="webForm.user.tel"
+                        />
+                      </div>
+                      <span
+                        class="my-1 ml-[88px] block text-12px text-white md:hidden"
+                        >*將以此號碼通知中獎</span
+                      >
+                      <div
+                        class="flex border-4 border-blue-200 mt-2 md:mt-4"
+                        v-for="(bill , index) in bills"
+                        :key="bill"
+                      >
+                        <label
+                          for="bill"
+                          class="flex min-w-[70px] items-center justify-center bg-blue-200 text-14px font-bold text-white md:min-w-[100px] md:text-16px lg:min-w-[130px]"
+                          v-cloak
+                          >發票{{ numberToString(index + 1) }}</label
+                        >
+                        <div class="w-full">
+                          <input
+                            type="text"
+                            id="bill"
+                            placeholder="輸入統一發票號碼(共10碼)"
+                            maxlength="10"
+                            class="form-control w-full bg-white py-2 px-4 text-14px uppercase text-gray-300 md:px-6 md:text-16px"
+                            v-model="bill.code"
+                          />
+                          <div class="relative border-t border-blue-200">
+                            <img
+                              src="./img/pc/icon-down-arrow.svg"
+                              alt="箭頭圖示"
+                              class="pointer-events-none absolute top-1/2 right-6 -translate-y-1/2"
+                            />
+                            <select
+                              class="form-control w-full bg-white py-2 px-4 text-14px text-gray-400 md:px-6 md:text-16px"
+                              v-cloak
+                              v-model="bill.nowBuyShop"
+                            >
+                              <option :value="''" disabled>
+                                請選擇購買通路
+                              </option>
+                              <option
+                                :value="shopping.nameEn"
+                                v-for="shopping in buyShop"
+                                :key="shopping.nameEn"
+                              >
+                                {{ shopping.name }}
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex justify-center">
+                        <button
+                          type="button"
+                          class="relative my-3 block h-10 w-10 rounded-full border-4 border-blue-200 bg-white duration-300 hover:scale-105 md:my-4 md:h-12 md:w-12"
+                          @click="addBill"
+                        >
+                          <span
+                            class="absolute top-1/2 left-1/2 h-1 w-6 -translate-x-1/2 -translate-y-1/2 bg-blue-200"
+                          ></span>
+                          <span
+                            class="absolute top-1/2 left-1/2 h-1 w-6 -translate-x-1/2 -translate-y-1/2 rotate-90 bg-blue-200"
+                          ></span>
+                        </button>
+                        <button
+                          type="button"
+                          class="relative my-3 ml-4 block h-10 w-10 rounded-full border-4 border-blue-200 bg-white duration-300 hover:scale-105 md:my-4 md:h-12 md:w-12"
+                          @click="deleteBill"
+                        >
+                          <span
+                            class="absolute top-1/2 left-1/2 h-1 w-6 -translate-x-1/2 -translate-y-1/2 bg-blue-200"
+                          ></span>
+                        </button>
+                      </div>
+                      <div class="mt-2 flex items-center">
+                        <div class="flex flex-1 border-4 border-blue-200">
+                          <label
+                            for="verificationCode"
+                            class="flex min-w-[70px] items-center justify-center bg-blue-200 text-14px font-bold text-white md:min-w-[100px] md:text-16px lg:min-w-[130px]"
+                            >驗證碼</label
+                          >
+                          <input
+                            type="text"
+                            id="verificationCode"
+                            placeholder="請輸入驗證碼"
+                            class="form-control w-full bg-white py-2 px-4 text-14px text-gray-300 md:px-6 md:text-16px"
+                          />
+                        </div>
+                        <img
+                          src="./img/pc/verification-code.png"
+                          alt="驗證碼"
+                          class="ml-2 min-w-[85px]"
+                        />
+                      </div>
+                      <label for="check" class="checkbox mt-2">
+                        <input type="checkbox" id="check" />
+                        <span
+                          class="checkbox__status checkbox__status--web checkbox__status--border checkbox__status--size"
+                        ></span>
+                        <span class="flex-1 text-14px text-white">
+                          我已詳閱<a
+                            href="javascript:;"
+                            class="border-b border-white"
+                            @click="goAnchor('#title-2')"
+                            >活動說明</a
+                          >及<a
+                            href="javascript:;"
+                            class="border-b border-white"
+                            @click="goAnchor('#title-3')"
+                            >注意事項</a
+                          >，同意提供個資作為活動參加使用，並已確認輸入有效發票，保留有顯示購買商品的發票正本及購買明細，以利兌獎。
+                        </span>
+                      </label>
+                      <button
+                        type="button"
+                        class="btn-green--outline relative mx-auto mt-4 flex items-center justify-center bg-pink-100 px-20 py-2 text-14px font-bold text-white md:text-16px"
+                        @click="webSendForm"
+                      >
+                        <span class="relative">確認送出</span>
+                        <img
+                          src="./img/pc/icon-double-white-arrow.svg"
+                          alt="箭頭"
+                          class="relative ml-3"
+                        />
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              src="./img/mobile/bg-login-audio.svg"
+              alt="音響"
+              class="absolute bottom-0 left-0 z-10 w-full md:hidden"
+            />
+          </section>
+
+          <section class="relative pt-4 pb-10 md:pt-20 lg:pt-8">
+            <div
+              id="title-2"
+              class="absolute top-[-54px] left-0 lg:top-[-84px]"
+            ></div>
+            <div class="mx-auto max-w-[1000px]">
+              <img
+                src="./img/mobile/bg-up-triangle.svg"
+                alt="上三角形"
+                class="-mt-[120px] w-full md:hidden"
+              />
+              <div
+                class="relative bg-blue-200 pt-12 md:py-12 lg:bg-transparent lg:py-0"
+              >
+                <div
+                  class="relative md:hidden"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img
+                    src="./img/mobile/bg-lightning-2.svg"
+                    alt="閃電"
+                    class="mx-auto"
+                  />
+                  <img
+                    src="./img/mobile/title-2-2x.png"
+                    alt="活動辦法"
+                    class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                  />
+                </div>
+                <div
+                  class="relative hidden md:block"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                  <img
+                    src="./img/pc/bg-lightning-2.svg"
+                    alt="閃電"
+                    class="mx-auto"
+                  />
+                  <img
+                    src="./img/pc/title-2-2x.png"
+                    alt="活動辦法"
+                    class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                  />
+                </div>
+                <ul
+                  class="mt-5 grid grid-cols-1 gap-y-10 md:mt-8 lg:grid-cols-3"
+                >
+                  <li data-aos="fade-up" data-aos-duration="1000">
+                    <div class="relative md:hidden">
+                      <img
+                        src="./img/mobile/bg-awards-text-1.svg"
+                        alt="天天抽(共10名)"
+                        class="mx-auto"
+                      />
+                      <img
+                        src="./img/mobile/bg-awards-1-2x.png"
+                        alt="GoPro HERO 10 Black"
+                        class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                      />
+                    </div>
+                    <div class="relative hidden md:block">
+                      <img
+                        src="./img/pc/bg-awards-text-1.svg"
+                        alt="天天抽(共10名)"
+                        class="mx-auto"
+                      />
+                      <img
+                        src="./img/pc/bg-awards-1-2x.png"
+                        alt="GoPro HERO 10 Black"
+                        class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                      />
+                    </div>
+                    <span
+                      class="relative block text-center text-24px font-bold text-white md:-mt-4"
+                      >GoPro HERO 10 Black</span
+                    >
+                  </li>
+                  <li
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                  >
+                    <div class="relative md:hidden">
+                      <img
+                        src="./img/mobile/bg-awards-text-2.svg"
+                        alt="天天抽(共10名)"
+                        class="mx-auto"
+                      />
+                      <img
+                        src="./img/mobile/bg-awards-2-2x.png"
+                        alt="GoPro HERO 10 Black"
+                        class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                      />
+                    </div>
+                    <div class="relative hidden md:block">
+                      <img
+                        src="./img/pc/bg-awards-text-2.svg"
+                        alt="加碼抽(共1名)"
+                        class="mx-auto"
+                      />
+                      <img
+                        src="./img/pc/bg-awards-2-2x.png"
+                        alt="Gogoro SuperSport ACE"
+                        class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                      />
+                    </div>
+                    <span
+                      class="relative block text-center text-24px font-bold text-white md:-mt-4"
+                      >Gogoro SuperSport ACE</span
+                    >
+                  </li>
+                  <li
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay="400"
+                  >
+                    <div class="relative md:hidden">
+                      <img
+                        src="./img/mobile/bg-awards-text-3.svg"
+                        alt="天天抽(共10名)"
+                        class="mx-auto"
+                      />
+                      <img
+                        src="./img/mobile/bg-awards-3-2x.png"
+                        alt="GoPro HERO 10 Black"
+                        class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                      />
+                    </div>
+                    <div class="relative hidden md:block">
+                      <img
+                        src="./img/pc/bg-awards-text-3.svg"
+                        alt="天天抽(共10名)"
+                        class="mx-auto"
+                      />
+                      <img
+                        src="./img/pc/bg-awards-3-2x.png"
+                        alt="Bose SoundLink Revolve+ 藍牙揚聲器 II"
+                        class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                      />
+                    </div>
+                    <span
+                      class="relative block text-center text-24px font-bold text-white md:-mt-4"
+                      >Bose SoundLink Revolve+ <br />藍牙揚聲器 II</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <img
+                src="./img/mobile/bg-down-triangle.svg"
+                alt="下三角形"
+                class="w-full md:hidden"
+              />
+              <div
+                class="relative px-4"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="./img/mobile/bg-cd.svg"
+                  alt="唱片"
+                  class="absolute -top-4 left-0 md:hidden"
+                />
+                <img
+                  src="./img/mobile/bg-geometry-1.svg"
+                  alt="幾何圖形"
+                  class="absolute -top-14 right-0 md:hidden"
+                />
+                <ul
+                  class="space-y-6 pt-[60px] md:space-y-8 md:pt-[90px] lg:pt-[120px]"
+                >
+                  <li>
+                    <img
+                      src="./img/pc/illustrate-text-1.svg"
+                      alt="注意事項說明標題"
+                      class="mx-auto md:mr-auto md:ml-0"
+                    />
+                    <p class="mt-2 text-14px text-white md:text-16px">
+                      自2022/07/01 00:00至2022/08/31
+                      23:59止，購買百事可樂/七喜汽水/激浪汽水品牌全系列商品任一件，並於此網站登錄購買之發票號碼(發票明細商須有指定商品名稱)留下個人資料，天天抽GoPro
+                      HERO 10 Black，加碼再抽Gogoro機車，百事可樂陪你一起GO夏天!
+                    </p>
+                  </li>
+                  <li>
+                    <img
+                      src="./img/pc/illustrate-text-2.svg"
+                      alt="注意事項說明標題"
+                      class="mx-auto md:mr-auto md:ml-0"
+                    />
+                    <ul
+                      class="mt-2 space-y-2 text-14px text-white md:text-16px"
+                    >
+                      <li class="flex">
+                        <span>1.</span>
+                        <p class="ml-1">
+                          天天抽GoPro HERO 10 Black(價值NT$16,500/台)，共10名。
+                        </p>
+                      </li>
+                      <li class="flex">
+                        <span>2.</span>
+                        <p class="ml-1">
+                          加碼抽Gogoro SuperSport
+                          ACE(價值NT$115,980/台)，共1名。
+                        </p>
+                      </li>
+                      <li class="flex">
+                        <span>3.</span>
+                        <p class="ml-1">
+                          7-11獨家通路加碼活動抽Bose SoundLink Revolve+
+                          藍牙揚聲器 II (價值NT$11,900/台)，共1名。
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="relative">
+                    <img
+                      src="./img/mobile/bg-audio-1.svg"
+                      alt="音響"
+                      class="absolute -top-8 -right-4 md:hidden"
+                    />
+                    <img
+                      src="./img/pc/illustrate-text-3.svg"
+                      alt="注意事項說明標題"
+                      class="mx-auto md:mr-auto md:ml-0"
+                    />
+                    <ul
+                      class="mt-2 space-y-2 text-14px text-white md:text-16px"
+                    >
+                      <li class="flex">
+                        <span>1.</span>
+                        <p class="ml-1">
+                          2022/08/22起天天抽(排除國定假日)GoPro HERO 10
+                          Black，共抽10天，每天一名。抽獎日當天16:00前由系統隨機抽出幸運得獎者，並於活動網站公布中獎名單，當天18:00以簡訊通知得獎者，請務必依照指定流程完成兌獎才有領獎資格。
+                        </p>
+                      </li>
+                      <li class="flex">
+                        <span>2.</span>
+                        <p class="ml-1">
+                          加碼抽之Gogoro SuperSport
+                          ACE及7-11通路獨家加碼活動抽Bose SoundLink Revolve
+                          藍牙揚聲器
+                          II各1名於2022/09/02由電腦隨機抽出，並於當天下午16:00於活動網站公布中獎名單。
+                          參與活動者請密切注意中獎名單，若無收到得獎通知，請自行與主辦單位聯繫，以免錯過得獎權利。
+                          中獎者務必於官網下載兌獎回函並以正楷填妥資料，連同發票正本、身分證正反面影本以掛號寄回台中市沙鹿區興安路65號「有百事GO夏天
+                          活動小組」收。
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="relative">
+                    <img
+                      src="./img/mobile/bg-activity-lightning.svg"
+                      alt="閃電"
+                      class="absolute -top-4 right-4 md:hidden"
+                    />
+                    <img
+                      src="./img/pc/illustrate-text-4.svg"
+                      alt="注意事項說明標題"
+                      class="mx-auto md:mr-auto md:ml-0"
+                    />
+                    <p class="mt-2 text-14px text-white md:text-16px">
+                      2022/09/20截止(憑郵戳日期)前，含正本發票/消費明細/中獎通知函/身分證正反影本。
+                    </p>
+                  </li>
+                  <li class="relative">
+                    <img
+                      src="./img/mobile/bg-geometry-2.svg"
+                      alt="幾何圖形"
+                      class="absolute -top-5 -left-4 md:hidden"
+                    />
+                    <img
+                      src="./img/pc/illustrate-text-5.svg"
+                      alt="注意事項說明標題"
+                      class="mx-auto md:mr-auto md:ml-0"
+                    />
+                    <p class="mt-2 text-14px text-white md:text-16px">
+                      2022/10/15前，活動小組將贈品全數寄出，寄出後恕不另行通知。
+                    </p>
+                  </li>
+                </ul>
+                <div class="relative">
+                  <div
+                    id="title-3"
+                    class="absolute top-[-54px] left-0 lg:top-[-84px]"
+                  ></div>
+                  <a
+                    href="javascript:;"
+                    class="btn-pink--outline relative mx-auto mt-[60px] flex w-[220px] items-center justify-center border-4 border-blue-200 bg-green-100 py-2.5 text-20px font-bold md:mt-[72px] md:w-[260px] md:text-24px"
+                    @click="openModal('precautions')"
+                  >
+                    <span class="relative">詳閱注意事項</span>
+                    <img
+                      src="./img/pc/icon-double-black-arrow.svg"
+                      alt="箭頭"
+                      class="ml-4"
+                    />
+                  </a>
+                  <img
+                    src="./img/mobile/bg-cd-audio.svg"
+                    alt="唱片音響"
+                    class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            class="relative px-4 pt-10 pb-[60px] md:pb-[100px] lg:pb-[156px]"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div
+              id="title-4"
+              class="absolute top-[-54px] left-0 lg:top-[-84px]"
+            ></div>
+            <div class="mx-auto max-w-[1200px]">
+              <div class="relative md:hidden">
+                <img
+                  src="./img/mobile/bg-lightning-2.svg"
+                  alt="閃電"
+                  class="mx-auto"
+                />
+                <img
+                  src="./img/mobile/title-3-2x.png"
+                  alt="影音專區"
+                  class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                />
+              </div>
+              <div class="relative hidden md:block">
+                <img
+                  src="./img/pc/bg-lightning-2.svg"
+                  alt="閃電"
+                  class="mx-auto"
+                />
+                <img
+                  src="./img/pc/title-3-2x.png"
+                  alt="影音專區"
+                  class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                />
+              </div>
+              <div
+                class="mt-4 grid grid-cols-1 gap-x-5 gap-y-3 md:mt-8 md:grid-cols-2"
+              >
+                <div class="relative pt-[56.25%]">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/AZQ5WlPNOKg"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    class="absolute top-0 left-0 h-full w-full"
+                  ></iframe>
+                </div>
+                <div class="relative pt-[56.25%]">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/fZ0bb6yvLwA"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    class="absolute top-0 left-0 h-full w-full"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section>
+          <div
+            ref="precautions"
+            class="precautions-modal bg-gray-500 bg-opacity-80"
+          >
+            <div
+              class="relative my-10 mx-auto max-w-[1200px] bg-primary px-3 pt-12 pb-6 md:my-[72px] md:pt-8 md:pb-9 lg:pb-12"
+            >
+              <button
+                type="button"
+                class="absolute top-4 right-5 z-10 h-6 w-6 cursor-pointer duration-300 hover:rotate-180 md:right-[55px] md:top-[55px] md:h-9 md:w-9"
+                @click="closeModal('precautions')"
+              >
+                <span
+                  class="absolute top-1/2 left-1/2 h-1.5 w-full -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white md:h-2"
+                ></span>
+                <span
+                  class="absolute top-1/2 left-1/2 h-1.5 w-full -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white md:h-2"
+                ></span>
+              </button>
+              <img
+                src="./img/pc/bg-trumpet-2.svg"
+                alt="喇叭"
+                class="absolute top-[55px] right-[124px] hidden xl:block"
+              />
+              <img
+                src="./img/pc/bg-right-cd.svg"
+                alt="唱片右"
+                class="absolute top-[750px] -right-[100px] hidden xl:block"
+              />
+              <img
+                src="./img/pc/bg-left-cd.svg"
+                alt="唱片左"
+                class="absolute top-[1320px] -left-[120px] hidden xl:block"
+              />
+              <img
+                src="./img/pc/bg-guitar.svg"
+                alt="吉他"
+                class="absolute bottom-2 -right-4 hidden xl:block"
+              />
+              <div class="relative md:hidden">
+                <img
+                  src="./img/mobile/bg-lightning-2.svg"
+                  alt="閃電"
+                  class="mx-auto"
+                />
+                <img
+                  src="./img/mobile/title-4-2x.png"
+                  alt="注意事項"
+                  class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                />
+              </div>
+              <div class="relative hidden md:block">
+                <img
+                  src="./img/pc/bg-lightning-2.svg"
+                  alt="閃電"
+                  class="mx-auto"
+                />
+                <img
+                  src="./img/pc/title-4-2x.png"
+                  alt="注意事項"
+                  class="absolute top-0 left-1/2 h-full -translate-x-1/2"
+                />
+              </div>
+              <div class="mx-auto max-w-[800px]">
+                <ul
+                  class="mt-6 space-y-5 text-14px tracking-wide text-white md:mt-9 md:space-y-8 md:text-16px"
+                >
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">1.</span>
+                    <p class="ml-1 flex-1">
+                      本活動僅限於購買百事可樂/七喜汽水/激浪汽水品牌全系列產品。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">2.</span>
+                    <p class="ml-1 flex-1">
+                      抽獎方式由網站系統自活動登錄名單隨機抽出得獎者，並於活動網頁公布。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">3.</span>
+                    <p class="ml-1 flex-1">
+                      每人每日限登錄二十張發票(以手機號碼計)，每張發票號碼限登錄一次及限中獎一次。天天抽抽獎日:08/22、08/23、08/24、08/25、08/26、08/29、08/30、08/31、09/01、09/02，加碼抽抽獎日:09/02(如遇不可抗力之因素導致當日無法抽獎，則順延一個工作日抽獎)。下午16:00點前公布於活動官網。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">4.</span>
+                    <p class="ml-1 flex-1">
+                      7-Eleven獨家加碼抽之BOSE無線藍芽音響為Bose SoundLink
+                      Revolve+ 藍牙揚聲器 II以實物為主，顏色採隨機出貨不選色。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">5.</span>
+                    <p class="ml-1 flex-1">
+                      獎項Gogoro SuperSport ACE
+                      -極光藍，以實車為準，中獎者需負擔前往Gogoro指定門市取車的交通費等相關事宜與費用，亦不得要求更改領車門市。獎項依規定無法申請政府電動車相關補助，中獎之獎項如有其他規費、費用負擔時，包含但不限於過戶規費、領牌費，手續費、保險費、電池月租費、及其他相關費用，均由中獎者負擔，如中獎者不願繳納或未於主辦單位規定期限內繳納時，視同放棄。各項費用依各縣市政府公告為主。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">6.</span>
+                    <p class="ml-1 flex-1">
+                      中獎者不得要求更改獎項或兌換現金，獎項均以實物為準，恕不得選款式、型號、挑色，亦不得將中獎資格轉讓其他人，違反前述規定之中獎人，主辦單位得取消其中獎項資格，如遇產品缺貨或其他不可抗力之事由，主辦單位得保留更換等值獎品之權利。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">7.</span>
+                    <p class="ml-1 flex-1">
+                      參加者若以惡意之電腦程式或其他明顯違反活動公平性之方式（利用電腦、網路之漏洞或不正當之行為），意圖混淆或影響活動結果者，一經主辦單位察覺，得立即取消參加者之中獎資格，並應返還獎品。參加者應自行負因違反相關規定所產生之一切法律責任。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">8.</span>
+                    <p class="ml-1 flex-1">
+                      如有任何因電腦、網路、技術、電話，或不可歸咎於主辦單位之事由，而使參加者所寄出之資料有所延遲、遺失、錯誤、無法辨識或毀損狀況，主辦單位不負任何法律責任，參加者不得有異議。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">9.</span>
+                    <p class="ml-1 flex-1">
+                      參加者同意填寫或提出之資料均為真實，且未冒用或盜用任何第三人之資料。如未提供正確資訊或未詳細填寫個人基本資料，導致活動中獎時無法通知、逾期及資料缺漏者，視同放棄得獎資格。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">10.</span>
+                    <p class="ml-1 flex-1">
+                      活動以發票為得獎憑據，請務必保留所登錄之發票正本，以供中獎後兌獎使用。活動之有效發票指「發票開立日期及發票登錄日期皆為活動期間2022/07/1-2022/08/31」，且發票需清楚載明購買品項為百事可樂/七喜汽水/激浪汽水，若發票無記載文字品項，則須附上購買明細以茲證明。如發票明細不符或無法證明購買品項為活動品項，則視中獎資料不符。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">11.</span>
+                    <p class="ml-1 flex-1">
+                      中獎者需填妥寄回本活動中獎之有效發票正本，並註明姓名、電話、地址，以掛號方式於
+                      2022/09/20前寄出(限掛號兌換，以郵戳為憑，逾期視同放棄)。收件地址:台中市沙鹿區興安路65號
+                      「有百事GO夏天 活動小組」收。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">12.</span>
+                    <p class="ml-1 flex-1">
+                      中獎發票為電子發票者，須向店家取得購買明細，或至電子發票列印平台列印發票號碼及購買明細以茲證明。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">13.</span>
+                    <p class="ml-1 flex-1">
+                      中獎發票經寄由主辦單位，不論得獎與否不另行退還。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">14.</span>
+                    <p class="ml-1 flex-1">
+                      所有中獎資格之查驗，以主辦單位之審核為準，並為唯一之依據。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">15.</span>
+                    <p class="ml-1 flex-1">
+                      中獎者不得要求更改獎項或兌換現金，得獎贈品均以實物為準，恕不得選款、挑色，亦不得將中獎資格轉讓其他人，違反前述規定之中獎人，主辦單位有權保留、變更或終止本活動期間、內容之權利、取消其中獎項資格。如遇產品缺貨或其他不可抗力之事由，主辦單位得保留更換等值獎品之權利。本活動如有任何內容變更，修改訊息將統一於活動網站上公布，恕不另行通知。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">16.</span>
+                    <p class="ml-1 flex-1">
+                      獎項金額若超過新台幣1,000元以上，中獎者需依規定填寫並以掛號方式寄回相關資料，經主辦單位核對中獎資訊無誤後，才得以進行中獎作業，未依規定或資料有誤者，則取消中獎資格，所有中獎者之聯絡資料，僅用於主辦單位通知及活動領獎確認用，不會另作其他用途；獎品金額超過新台幣20,000元以上，依國稅局規定得獎者須依稅法先行自付10%機會中獎稅，由主(協)辦單位代扣繳，始得領取活動獎品，不願繳交稅金者視同放棄得獎權利。非中華民國境內居住之個人(即在中華民國境內居未達183天之本國人及外國人)不論中獎所得之金額，須就中獎所得扣繳20%機會中獎稅。主辦單位將開立各類所得稅扣繳憑單給中獎者，獎項價值以主辦單位實際購買贈品及統一發票或收據金額為主。（有關「中獎獎金之扣繳稅款」以財政部發佈之條款為準）。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">17.</span>
+                    <p class="ml-1 flex-1">
+                      個資蒐集聲明：若您參與本活動並提供資料時，即表示您同意主辦單位依下列條款蒐集、處理、使用您於本網站提供之個人資料。主辦單位依據個人資料保護法(以下簡稱個資法)第八條第一項規定告知台端(參加人)，主辦單位蒐集
+                      台端(參加人)個人資料之特定目的，係基於行銷、非公務機關依法定義務所進行個人資料之蒐集處理及利用、契約、類似契約或其他法律關係事務、消費者、客戶管理與服務、稅務行政、會計與相關服務、資(通)訊服務、資(通)訊與資料庫管理、資通安全與管理、廣告或商業行為管理、調查、統計與研究分析、其他公務機關對目的事業之監督管理或其他經營合於營業登記項目之業務等，所蒐集之個人資料之類別為姓名、出生年月日、身分證統一編號、身份類別、戶籍地址、通訊地址、聯絡電話、電子郵件信箱之內容為準。利用之對象為味丹企業股份有限公司及受前開機構委託處理事務之之其他機構或必要人員、依法有權機關(例如：稅務機關)及台端所同意之對象。並於本活動期間及活動結束後依相關法令所定（例如：商業會計法）或因執行此業務必須保存期間(以期限最長者為準)保管及運用。使用地區限於「個人資料利用之對象」其國內及國外所在地。使用方式為符合個人資料保護相關法令以自動化機器或其他非自動化之利用方式之蒐集、處理、國際傳輸與利用(例如使用電子文件、紙本或其他合於當時科學技術之適當方式等)。台端(參加人)得依據個資法第三條規定得查詢、請求閱覽、請求製給複製本、請求補充、更正、請求停止蒐集、處理或利用、
+                      台端之個人資料，但主辦單位得酌收必要成本費用，如
+                      台端欲行使上述個資法第三條規定之各項權利，得利用主辦單位之活動客服電話詢問辦理或以書面通知主辦單位辦理。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">18.</span>
+                    <p class="ml-1 flex-1">
+                      本活動僅限在台澎金馬地區進行，本活動獎項之寄送地址僅限台澎金馬地區，若中獎者未提供資料或提供不實資料，導致無法通知中獎或贈品無法寄送，視同放棄得獎權利並自負其責，而未於時間內回覆中獎資料、未依約填寫或繳納稅款者皆視為放棄中獎權利，本活動不會再進行候補中獎者抽選。若因填寫地址錯誤而退回，將喪失得獎資格不再補寄。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">19.</span>
+                    <p class="ml-1 flex-1">
+                      贈品在郵寄過程中，所造成的毀壞、遲遞、錯誤或遺失，主辦單位恕不負責。
+                      本次活動的主辦單位為味丹股份有限公司，主辦單位及協辦單位員工不得參加此活動。
+                    </p>
+                  </li>
+                  <li class="flex">
+                    <span class="w-5 text-right md:w-6">20.</span>
+                    <p class="ml-1 flex-1">
+                      活動客服電話:
+                      <a href="tel:0800-461015" class="border-b border-white"
+                        >0800-461015</a
+                      >
+                      ，請於上班時間08:00-12:00、13:00-17:00來電詢問。
+                    </p>
+                  </li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn-green--outline relative mx-auto mt-9 flex w-[260px] items-center justify-center border-4 border-blue-200 bg-pink-100 py-2 font-bold text-white md:mt-10"
+                  @click="closeModal('precautions')"
+                >
+                  <span class="relative">關閉</span>
+                  <img
+                    src="./img/pc/icon-double-white-arrow.svg"
+                    alt="箭頭"
+                    class="relative ml-6"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            ref="message"
+            class="message-modal"
+            :class="{'is-active': WebFormModal}"
+          >
+            <div
+              class="mx-auto flex min-h-screen max-w-[1200px] items-start justify-center"
+            >
+              <div
+                class="bg-white max-w-[300px] w-full md:max-w-[500px] mx-auto rounded-5 p-4 shadow-inner"
+              >
+                <div v-if="isSuccess">
+                  <span class="block">發票登入成功</span>
+                  <div class="text-right">
+                    <button
+                      type="button"
+                      class="bg-primary px-4 py-2 text-white rounded-5 text-14px md:text-16px"
+                      @click="openModal('coupon'),closeModal('message')"
+                    >
+                      確定
+                    </button>
+                  </div>
+                </div>
+                <div v-else>
+                  <ul>
+                    <li>
+                      <span class="block" v-if="webForm.user.name === ''"
+                        >請填寫姓名</span
+                      >
+                    </li>
+                    <li>
+                      <span class="block" v-if="webForm.user.tel === ''"
+                        >請填寫電話</span
+                      >
+                    </li>
+                  </ul>
+                  <div class="text-right">
+                    <button
+                      type="button"
+                      class="bg-primary px-4 py-2 text-white rounded-5 text-14px md:text-16px"
+                      @click="closeWebFormModal"
+                    >
+                      確定
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div ref="coupon" class="coupon-modal">
+            <div
+              class="mx-auto flex min-h-screen max-w-[1200px] items-center justify-center px-4"
+            >
+              <div class="relative mx-auto max-w-[100%] md:max-w-[600px]">
+                <a
+                  href="javascript:;"
+                  class="relative ml-auto mb-2 block h-[30px] w-[30px] rounded-full bg-white duration-300 hover:rotate-90 sm:mr-[6%] sm:h-8 sm:w-8 lg:mr-[5%] lg:h-10 lg:w-10"
+                  @click="closeModal('coupon')"
+                >
+                  <span
+                    class="absolute top-1/2 left-1/2 h-5 w-1 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-primary lg:h-6"
+                  ></span>
+                  <span
+                    class="absolute top-1/2 left-1/2 h-5 w-1 -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-primary lg:h-6"
+                  ></span>
+                </a>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="./img/pc/bg-coupon-1.jpg"
+                        alt="優惠券"
+                        class="mx-auto w-full max-w-[447px]"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./img/pc/bg-coupon-2.jpg"
+                        alt="優惠券"
+                        class="mx-auto w-full max-w-[447px]"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./img/pc/bg-coupon-3.jpg"
+                        alt="優惠券"
+                        class="mx-auto w-full max-w-[447px]"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./img/pc/bg-coupon-4.jpg"
+                        alt="優惠券"
+                        class="mx-auto w-full max-w-[447px]"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <p class="text-center text-14px text-white md:text-18px">
+                  儲存美食優惠券：手機長按圖片可儲存，電腦按右鍵可另存新檔。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="bg-white px-[26px] pt-2.5 pb-1.5 lg:pt-4 lg:pb-2.5">
+        <div class="mx-auto max-w-[1200px]">
+          <div class="flex items-center justify-center lg:justify-between">
+            <picture>
+              <source
+                srcset="./img/pc/footer-logo.svg"
+                media="(min-width: 992px)"
+              />
+              <img src="./img/mobile/footer-logo.svg" alt="footer-logo" />
+            </picture>
+            <ul class="hidden lg:flex">
+              <li class="text-14px font-bold text-blue-200 xl:text-16px">
+                有百事GO夏天 活動小組
+              </li>
+              <li
+                class="ml-4 text-14px text-blue-200 xl:ml-[30px] xl:text-16px"
+              >
+                台中市沙鹿區興安路65號
+              </li>
+              <li
+                class="ml-4 text-14px text-blue-200 xl:ml-[30px] xl:text-16px"
+              >
+                活動客服電話：0800-461015，上班時間08:00-12:00、13:00-17:00。
+              </li>
+            </ul>
+          </div>
+          <p class="mt-2.5 text-center text-14px text-gray-300">
+            百事可樂、PEPSI，PEPSI-COLA及百事圓球圖案為美國百事公司PepsiCo, Inc.
+            所擁有的商標©百事公司
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/plugin/aos.js"></script>
+    <script src="./js/plugin/swiper-bundle.min.js"></script>
+    <script src="./js/plugin/jquery-3.6.0.min.js"></script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
